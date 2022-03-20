@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html {
+            background-color: lightblue;
+        }
+
+        .box1 {
+
+            height: 100px;
+            background-color: red;
+
+        }
+
+        button {
+            position: fixed;
+            left: 100px;
+            bottom: 100px;
+        } */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1" class="left">div1</div>
+    <div id="box2" class="right">div2</div>
+
+
+    <script>
+        // var arr = ['apple', 'bannna', 'bannna', 'orange']
+        // var brr=['tomato','sehhe']
+        //    for(let [key,val] of arr.entries()){
+        //        console.log(key)
+        //    }
+        // console.log(arr.keys())
+        // for(let key of arr.keys()){
+        //     console.log(key)
+        // }
+        // let newarr=[]
+        // // arr.forEach(element => {
+        // //     newarr.push(element)
+        // // });
+        // // console.log(newarr)
+        // // arr.pop()
+        // // console.log(newarr)
+        // // console.log(arr)
+        // let b=Object.assign(newarr,arr,brr)
+        // console.log(b)
+        // var b = arr.filter((item) => {
+        //     return item == 'apple'
+        // })
+        // console.log(b)
+        // var c=arr.some((item)=>{
+        //    return item=='apple'
+        // })
+        // console.log(c)//true
+        // var d=arr.every((item)=>{
+        //     return item=='apple'
+        // })
+        // console.log(d)
+        // let json={
+        //     a:1,
+        //     b:2,
+        //     c:3,
+        //     d:4
+        // }
+        // let json1={}
+        // let c=Object.assign(json1,json)
+        // console.log(c)
+        // let str='adsfasf'
+        // let e=str.includes('a')
+        // console.log(e)
+        // let f=arr.indexOf('apple')
+        // console.log(f)
+        // 
+        // let json1={...json}
+
+        // console.log(json1)
+        // let json1={...json}
+        // console.log(json1)
+        // for(let item of arr.entries()){
+        //     console.log(item)
+        // }
+        // let b=arr.forEach(function(val,index,self) {
+        //   console.log(this,val, index)
+
+        // },123);
+        // console.log(b)
+        // const arr=[
+        //     {title:'aaa',hot:true,red:100},
+        //     {title:'bbb',hot:true,red:100},
+        //     {title:'ccc',hot:true,red:100},
+        //     {title:'ddd',hot:true,red:100}
+        // ]
+        // let newarr= arr.map((val,index,arr)=>{
+        //     let json={}
+        //     json.t=val.title,
+        //     json.h=val.hot,
+        //     json.r=val.red+100
+        //     return [json]
+        // })
+        // console.log(newarr)
+        //  const brr= [{title:'aaa',hot:true,red:100},
+        //     {title:'bbb',hot:true,red:100},
+        //     {title:'ccc',hot:false,red:100},
+        //     {title:'ddd',hot:true,red:100}]
+        //     const crr=brr.filter((item,index)=>{
+        //        return item.hot==false
+        //     })
+        //     console.log(crr)
+        //     const b=brr.some(item=>{
+        //         return item.hot==true
+        //     })
+        //     console.log(b)
+        // const grr=[2,3,4]
+        // const y=grr.reduceRight ((prv ,cr)=>{
+
+        //     return prv**cr
+        // })
+        // console.log(y)
+        // console.log(arr.keys())
+        // const v=[1,2,3,4,5]
+        // for(let [item,val] of v.entries()){
+        //    console.log(val)
+        // }
+        // console.log(v.values())
+
+        // const obj=[...arr]
+        // console.log(obj);
+
+        // function demo(){
+        //     console.log(arguments)
+        //     let b=[...arguments]
+        //     let c=Array.from(arguments)//form()把类数组转成数组,具备length就靠谱
+        //     console.log(c)
+        //     console .log(b)
+        // }
+        // demo(1,2,3,4,5,6)
+
+        // let c=Array.of('name','banana','apple')
+        // let d=c.findIndex((item,index)=>{
+        // return item=='banana'
+        // })
+        // console.log(d)
+        // c.fill('age',3,4)
+        // console.log(c)
+
+        // console.log(c)
+
+
+        // let arr=new Array(10)
+        // console.log(arr)
+        // arr.fill('默认值',3,5)//从3项开始，到第5项结束
+        // arr.fill('aaa',7,8)
+        // console.log(arr)
+        // let c = arr.findIndex((item) => { //findIndex找出第一个满足条件的数组成员,返回其位置，返回没找到返回-1
+        //     return item == 'bannna'
+        // })
+
+        // console.log(c)
+        // let d=arr.find((item)=>{
+        //     return item=='aaa'
+        // })
+        // console.log(d)
+        // let l=arr.indexOf('aaa')
+        // console.log(l)
+        // y=arr.includes('aaa')
+        // console.log(y)
+        // arr.fill('li', 2, 3)
+        // console.log(arr)
+        // let p = arr.includes('li') //判断数组里面包不包含li，包含返回true，不包含返回false
+        // console.log(p)
+        // console.log(Object.is(NaN, NaN))//true
+        // console.log(Object.is(-0,+0))//false
+        // var bbb="aaa"
+        // console.log(Object.is('aaa',bbb))//true
+
+        // console.log(Number.isNaN(NaN))//true
+        // console.log(+0 == -0)//true
+        // Object.assign()
+
+
+        // let obj = {
+        //     a: 1,
+        //     b: 2,
+        // }
+        // let abj1 = {
+        //     a: 3,
+        //     d: 4,
+        //     e: 5,
+        //     f: 6
+        // }
+        // let taget = Object.assign({}, obj, abj1)
+        // console.log(taget)//后面的obj1和前面的obj有相同的key，会以后面的为准
+        // let arr = [1, 2, 3, 4, 5, 6]
+        // let brr = [...arr]
+
+
+        // console.log(arr == brr)//false
+        // console.log(brr)
+        // let crr = Object.assign({}, brr)
+        // console.log(crr)
+        // var str={...obj}
+        // console.log(str)
+        // let {
+        //     e,
+        //    f,
+        //     ...z
+        // } = {
+        //     c: 3,
+        //     d: 4,
+        //     e: 5,
+        //     f: 6
+        // }
+        // console.log(z)
+
+        //             let a=1;
+        //             let promise=new Promise(function(resolve,reject){
+        //                 if(a==10){
+        //                     resolve('成功')
+        //                 }else{
+        //                     reject('失败')
+        //                 }
+        //             })
+        // promise.then(res=>{
+        //     console.log(res)
+        // }).catch(err=>{
+        //     console.log(err)
+        // })
+        // promise.catch(err=>{
+        //     console.log(err)
+        // })
+        // promise.catch(err=>{
+        //     console.log(err)
+        // })
+        // let a=10
+        // let promise=new Promise(function(r,p){
+        //     if(a==1){
+        //         r('成功')
+        //     }else[
+        //         p('失败')
+        //     ]
+        // })
+        // promise.then(res=>{
+        //     console.log(res)
+        // })
+        // .catch(err=>{
+        //     console.log(err)
+        // })
+
+        // let 3=Promise.resolve('aaa');
+        // // Promise.reject('bbb')
+
+        // 3.then(res=>{
+        //     console.log(res)
+        // })
+
+        // let promise=new Promise((resolve,reject)=>{
+        //     resolve('成功')
+        //     reject('失败')
+
+        // })
+        // promise.then(res=>{
+        //     console.log(res)
+        // },err=>{
+        //     console.log(err)
+
+        // })
+
+
+
+        // let arr = [
+        //     { title: "aaa", ishot: true, red: 100 },
+        //     { title: "bbb", ishot: true, red: 100 },
+        //     { title: "ccc", ishot: true, red: 100 },
+        //     { title: "ddd", ishot: true, red: 100 },
+        // ]
+
+        //  let a=arr.forEach((val,ind,arr)=>{
+        //     val.title='eee'
+
+        // })
+        // console.log(arr)
+        // console.log(a)//undefined
+
+        // let b=arr.map((val,index,arr)=>{
+        //     var json={}
+        //     json.t=val.title
+        //     json.r=val.red+100
+        //     json.ishot=val.ishot&&'666'
+        //     return json
+        // })
+        // console.log(b)
+        // console.log(arr)
+        //     let arr=[1,3,5,6,7,8,4,8]
+        // let b = arr.filter((val, index, arr) => {
+        //     return val >3
+        // })
+        // console.log(b)
+
+
+        // let arr = [
+        //     { title: "aaa", ishot: true, red: 100 },
+        //     { title: "bbb", ishot: false, red: 100 },
+        //     { title: "ccc", ishot: true, red: 100 },
+        //     { title: "ddd", ishot: false, red: 100 },
+        // ]
+
+        // let b=arr.every((val ,index ,arr)=>{
+        //        return val.ishot
+        //     })
+        //     console.log(b)
+        //         let arr=[1,2,3]
+        //           let b=  arr.reduce((prv,cur,index,arr )=>{
+
+        //                 console.log(prv,cur,index)
+        //                 return prv+cur
+        //             })
+        // console.log(b)
+        //   let arr = [
+        //             { title: "aaa", ishot: true, red: 100 },
+        //             { title: "bbb", ishot: false, red: 201 },
+        //             { title: "ccc", ishot: true, red: 100 },
+        //             { title: "ddd", ishot: false, red: 300 },
+        //         ]
+
+
+        // for (const item of arr) {
+        //     console.log(item)
+        // }
+        // let brr=Array.from(arr)
+        // console.log(brr)
+
+        // function demo(){
+        //     console.log(Array.from(arguments))
+        // }
+        // demo(1,2,3,4,5)
+        // let obj={0:'aaa',1:'bbb',length:2}
+        // let b=Array.from(obj)//把类数组转成数组，只要有length就靠谱
+        // console.log(b)
+        // let str='string'
+        // let s=Array.from(str)
+        // console.log(s)
+
+        // let brr=Array.of('name','boann')//把一组值转成数组
+
+
+        // console.log(brr)
+
+        // let brr=[200,80,90,2,6,23,59]
+        //     let b=brr.find((val,index,brr)=>{
+        //         return val>60
+        //     })
+        //     console.log(b)
+
+
+        //     let a=arr.find((val,index,arr)=>{
+        //         return val.red>200
+        //     })
+        //     console.log(a)
+
+        //     let e=brr.findIndex(item=>{
+        //         return item==202
+        //     })
+        //     console.log(e)
+
+
+        //     brr.fill('name',3,4)
+        //     console.log(brr)
+
+        //     let l=brr.includes(90)
+        //     console.log(l)
+        //    let c= brr.indexOf(200)
+        //    console.log(c)
+
+        // //    findIndex和 indexOf的区别,findIndex()里面是放一个回调函数,返回满足条件的项的index，找不到返回-1，indexof(),里面放的是内容，返回满足条件的内容的index
+        // let err=Object.assign([],arr,brr)
+        //     let crr=Object.assign({},brr,arr)//合并对象和数组，后面的覆盖前面的
+
+        //     console.log(crr)
+
+        // let obj={
+        //     a:1,
+        //     b:2,
+        //     c:3
+        // }
+        // for(let key of Object.keys(obj)){
+        //     console.log(key)
+        // }
+        // const {keys,entries,values}=Object
+
+        // let obj={
+        //     a:1,
+        //     b:2,
+        //     c:3
+        // }
+        // let arr=[1,3,4,5,6,77,8,2]
+        // for(let [key,val] of keys(arr)){
+        //     console.log([key,val])
+        // }
+
+
+        // let obj={
+        //     a:'name',
+        //     b:"age",
+        //     c:'wife'
+        // }
+        // const {keys,values,entries}=Object
+        // let pobj={...obj}
+        // console.log(pobj)
+        // let e=Object.assign({},obj)
+        // console.log(e)
+
+
+        // for(let item of entries(obj)){
+        //     console.log(item)
+        // }
+
+
+        // for(let item of entries(obj)){
+        //     console.log(item)
+        // }
+        // for(prop in obj){
+        //     console.log(prop )
+        // }
+
+        // let a=10
+        // let promise=new Promise((resolve,reject)=>{
+        //     if(a==100){
+        //         resolve('成功')
+        //     }else{
+        //         reject('失败')
+        //     }
+        // })
+        // promise.then(res=>{//then可以有第二个参数，也可以then结束后继续用.catch(err=>{console.log(err)})
+        //     console.log(res)
+        // },err=>{
+        //     console.log(err)
+        // })
+        // promise.then(res=>{console.log(res)})
+        // promise.catch(err=>{console.log(err)})
+        // promise.then(res=>{console.log(res)}).catch(err=>{console.log(err)})
+
+
+        // let p1=Promise.resolve('aaa');//resolve状态，成功状态
+        // //等价于
+        // let p2=new Promise(resolve=>{
+        //     resolve('aaa')
+        // })
+
+        // let p4= Promise.reject('bbb')//reject状态，失败状态
+        // //等价于
+        // let p3= new Promise((resolve,reject)=>{
+        //     reject('ccc')
+        // })
+        // p2.then(res=>{
+        //     console.log(res)
+        // }).catch(err=>{
+        //     console.log(err)
+        // })
+        // p2.catch(err=>{
+        //     console.log(err)
+        // })
+        // let p1=Promise.resolve('aaa')
+        // let p2=Promise.resolve('bbb')
+        // let p3=Promise.resolve('ccc')
+
+        // Promise.all([p1,p2,p3])//把promise对象打包，扔到一个数组里，打包后还是一个promise对象,必须确保每个promise都是resolve状态，即成功的状态，
+        // Promise.all([p1,p2,p3]).then(res=>{
+        //     let [res1,res2,res3]=res
+        //     console.log(res1,res2,res3)//'aaa''bbb''ccc'
+        // })
+
+        // let p1=Promise.resolve('aaa')
+        // // let p2=Promise.reject('bbb')
+        // let p3=Promise.resolve('ccc')
+        // let p=Promise.race([p1,p3])//只要有一个是成功的状态，就可以返回
+        // p.then(res=>{
+        //     console.log(res)
+        // },err=>{console.log(err)})
+
+        // let t=setTimeout((res,ti) => {
+        //     console.log(res,ti)
+        // }, 1000,'好','asf');
+
+        // console.log(t)
+
+        // var p1 = new Promise(function(resolve, reject) {
+        //     setTimeout(resolve, 500, "one");
+        // });
+        // var p2 = new Promise(function(resolve, reject) {
+        //     setTimeout(resolve, 1000, "two");
+        // });
+
+        // Promise.race([p1, p2]).then(function(value) {
+        //   console.log(value); // "two"
+        //   // 两个都完成，但 p2 更快
+        // });
+
+
+        // let p=Promise.resolve('aaa')
+        // p.then(res=>{
+        //     console.log(res)
+        // })
+        // let p1=Promise.reject('bbb')
+        // p1.catch(err=>{
+        //     console.log(err)
+
+        // })
+
+        // let p2=Promise.resolve('ccc')
+
+
+        // let p3=Promise.resolve('ddd')
+
+        // let p=Promise.all([p1,p2,p3])
+        //     p.then(res=>{
+        //         console.log(res)
+        //     },err=>{console.log(err)})
+
+        //    let p1=()=>{
+        //        let p=new Promise((resolve,reject)=>{
+        //            setTimeout(() => {
+        //                var num=Math.ceil(Math.random()*1000)
+        //                console.log('1秒产生的随机数是'+num)
+        //                if(num>50){
+        //                    resolve('1秒产生的随机数是'+num)
+        //                }else{
+        //                    reject('1秒生成的随机数太小')
+        //                }
+        //            }, 1000);
+        //        })
+        //        return p
+        //    }
+        //    let p2=()=>{
+        //        let p=new Promise((resolve,reject)=>{
+        //            setTimeout(() => {
+        //                var num=Math.ceil(Math.random()*1000)
+        //                console.log('2秒产生的随机数是'+num)
+        //                if(num>50){
+        //                    resolve('2秒产生的随机数是'+num)
+        //                }else{
+        //                    reject('2秒生成的随机数太小')
+        //                }
+        //            }, 2000);
+        //        })
+        //        return p
+        //    }
+        //    let p3=()=>{
+        //        let p=new Promise((resolve,reject)=>{
+        //            setTimeout(() => {
+        //                var num=Math.ceil(Math.random()*1000)
+        //                console.log('3秒产生的随机数是'+num)
+        //                if(num>50){
+        //                    resolve('3秒产生的随机数是'+num)
+        //                }else{
+        //                    reject('3秒生成的随机数太小')
+        //                }
+        //            }, 1000);
+        //        })
+        //        return p
+        //    }
+
+
+        //    let promise=Promise.all([p1(),p2(),p3()])
+        //    promise.then(re=>{
+        //        console.log(re)
+        //    }).catch(err=>{console.log(err)})
+    </script>
+    <!-- <button onclick="promise()">开始请求数据</button> -->
+    <!-- <div  class="nane">
+        <span></span>
+      <span></span>
+        <em>fdasdf</em>
+        <i></i>
+        <b></b>
+
+    </div> -->
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="box1"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button>回到原来位置</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <hr style="width: 10000px;">
+    <div class="box1"></div> -->
+
+</body>
+<!-- <script>
+   
+   const promise=() => {
+            console.log('方法被调用')
+            let p = new Promise((reslove, reject) => {
+
+                setTimeout(function(){
+                    console.log('promise已经执行完毕')
+                    reslove('开始请求数据')
+
+                }, 2000);
+            }).then(res=>{console.log(res)})
+            return p
+        };
+
+        // promise().then(res=>{
+        //     console.log(res )
+        // })
+        
+//  promise.then(res=>{
+//      console.log(res)
+//  })
+</script> -->
+
+<script>
+    // class Prosen{
+    //     constructor(name,age){
+    //         this.name=name
+    //         this.age=age
+    //     }
+    //     showname(){
+    //         return `名字是，${this.name},年龄是${this.age}`
+    //     }
+    // }
+    // let p=new Prosen('zhang',19)
+    // console.log(p.showname())
+
+
+    // class Person {
+    //     constructor() {
+    //         this.name = 'strve'
+    //     }
+    //     showname() {
+    //         return '这是一个名字'
+    //     }
+    //     static bbb() {//静态方法，就是父类的方法，使用方法:Person.bbb()
+    //         return '这是一个静态方法'
+    //     }
+    // }
+
+    // class Person{
+    //     constructor(name){
+    //         this.name=name
+
+    //     }
+    //     showName(){
+    //         console.log('父类的shouName')
+    //         return `名字为${this.name}`
+    //     }
+
+    // }
+
+    // class Student extends Person{
+    //     constructor(name,skill){
+    //         super(name)
+    //         this.skill=skill
+    //     }
+    //     showName(){
+    //         super.showName()//父级的方法执行
+    //         return `这是子类的showName`
+    //     }
+    //     shouSkill(){
+    //         return `哥们的技能是${this.skill}`
+    //     }
+    // }
+    // let stu=new Student('zhang','逃学')
+    // console.log(stu.showName())
+
+    // class Person {
+    //     constructor(name) {
+    //         this.name = name
+    //     }
+    //     showName() {
+    //         console.log('这是父类的shouName')
+    //     }
+    // }
+
+    // class Student extends Person {
+    //     constructor(name, skill) {
+    //         super(name)
+    //         this.skill = skill
+    //     }
+    //     showName() {
+    //         super.showName()
+    //         console.log('真实子类的名字')
+    //     }
+    //     showSkill() {
+    //         return `哥们的技能是：${this.skill}`
+    //     }
+    // }
+
+
+    // let stu = new Student('zhang','逃学')
+    // console.log(stu.name,stu.showName())
+
+    // class Person {
+    //     constructor(name, age) {
+    //         this.name = name
+    //         this.age = age
+    //     }
+    //     showname() {
+    //         console.log(`这是父类打出来的名字`)
+    //     }
+    // }
+    // class Student extends Person {
+    //     constructor(name, age, skill) {
+    //         super(name, age)
+    //         this.skill = skill
+    //     }
+    //     showname() {
+    //         super.showname()
+    //         console.log(`这是子类打出来的名字`)
+    //     }
+    //     showskill() {
+    //         return `哥们的技能是${this.skill}`
+    //     }
+    // }
+    // let student = new Student('张', 19, '逃学')
+    // console.log(student.showname(),)
+    // class Person {
+    //     constructor(name, age) {
+    //         this.name = name
+    //         this.age = age
+    //     }
+    //     showname() {
+    //         console.log('这是父类打印出来的') 
+    //     }
+    // }
+    // class Student extends Person {
+    //     constructor(name, age, skill) {
+    //         super(name, age)
+    //         this.skill = skill
+    //     }
+    //     showname() {
+    //         super.showname()
+    //         return `这是子类打印出来的`
+    //     }
+    //     showskill() {
+    //         return `哥们的技能是${this.skill}`
+    //     }
+
+    // }
+
+    // let std=new Student('张',18,'逃学')
+</script>
+<script>
+    //     let div=document.getElementsByTagName('div')[0]
+    //      let sped = 1
+    //     let div = document.createElement('div')
+    //     document.body.appendChild(div)
+    //     let button=document.createElement('button')
+    //    document.body.appendChild(button)
+    //     button.innerHTML='加速'
+    // button.onclick=function(){
+    //     sped++;
+    // }
+    // div.style.width='100px'
+    // div.style.background='red'
+    // div.style.height='100px'
+    // let li = document.querySelectorAll('div')
+    // console.log(li)
+    // let div = document.createElement('div')
+    // div.innerHTML = 4
+    // document.body.appendChild(div)
+    // let f = div.parentNode
+    // let F=f.parentNode.parentNode.parentNode
+    // console.log(F)
+
+
+
+    // let body=document.body.childNodes
+    // console.log(body)
+    //     div.style.width = '100px'
+    //     div.style.height = '100px'
+    //     div.style.background = 'red'
+    //     div.style.position = 'absolute'
+    //     div.style.top = 0
+    //     div.style.left = 0
+
+    //     let tiemr = setInterval(function () {
+
+    //         div.style.left = parseInt(div.style.left) + sped + 'px'
+    //         div.style.top = parseInt(div.style.top) + sped + 'px'
+    //         if (parseInt(div.style.top) > 1000) {
+    //             clearInterval(tiemr)
+    //         }
+    //     }, 100)
+    // document.onkeydown = function (e) {
+    //     console.log(e.target)
+    //     switch (e.which) {
+    //         case 38:
+    //             div.style.top = parseInt(div.style.top) - 10 + 'px'
+    //             break
+    //         case 40:
+    //             div.style.top = parseInt(div.style.top) + 10 + 'px'
+    //             break
+    //         case 37:
+    //             div.style.left = parseInt(div.style.left) - 10 + 'px'
+    //             break
+    //         case 39:
+    //             div.style.left = parseInt(div.style.left) + 10 + 'px'
+    //             break
+
+    //     }
+    // }
+    // let first = document.getElementsByTagName('div')[0]
+    // console.log(first)
+
+    //     let nodeElement=function(node){
+    //         let temp={
+    //             length:0,
+    //             push:Array.prototype.push,
+    //             splice:Array.prototype.splice
+    //         }
+    //         let child=node.childNodes;
+
+    //         let len=child.length;
+    //         for(let i;i<len;i++){
+    //             if(child[i].nodeType===1){
+    //                 console.log(child[i])
+    //                 temp.push(child[i])
+    //             }
+    //         }
+    //         return temp
+    //     }
+    //     let body=document.body
+
+    //   let nodes=nodeElement(body)
+</script>
+<script>
+    //     var  div = document.getElementsByTagName('div')[0]
+    //    function nodeElement(node) {
+    //         var temp = {
+    //             length: 0,
+    //             push: Array.prototype.push,
+    //             splice: Array.prototype.splice
+    //         };
+    //         var child = node.childNodes,
+    //             len = child.length;
+    //         for (var i=0; i < len; i++) {
+    //             if (child[i].nodeType === 1) {
+
+    //                 temp.push(child[i])
+    //             }
+    //         }
+    //         return temp
+    //     }
+    //     console.log(nodeElement(div))
+
+
+    // let i = document.getElementsByTagName('i')[0];
+    // function getpvernode(e, n) {
+    //     while (e && n) {
+    //         if (n > 0) {
+    //             if (e.nextElementSibling) {
+    //                 e = e.nextElementSibling
+    //             } else {
+    //                 for (e = e.nextSibling; e && e.nodeType != 1; e = e.nextSibling);
+    //             };
+    //             n--;
+    //         } else {
+    //             if (e.previousElementSibling) {
+    //                 e = e.previousElementSibling
+    //             } else {
+    //                 for (e = e.previousSibling; e && e.nodeType != 1; e = e.previousSibling);
+    //             }
+    //             n++;
+    //         }
+
+    //     }
+    //     return e
+    // }
+
+    // let i=document.getElementsByTagName('i')[0]
+
+    //     var div=document.createElement('div')
+
+    //         i.appendChild(div)
+    // let text=document.createTextNode('zhang')
+
+    // div.innerHTML=123//会覆盖掉所有的子元素
+    // div.appendChild(text)//子元素的最后开始插入，相当于数组的push,把一个己经有的放在
+    // div.setAttribute('class','box1')
+
+
+    function getscrollOffset() { //封装一个求滚动条滚动距离的兼容性方法，
+        if (window.pageXOffset) {
+            return {
+                x: window.pageXOffset,
+                Y: window.pageYOffset
+            }
+        } else {
+            return {
+                x: document.body.scrollLeft + document.documentElement.scrollLeft,
+                y: document.body.scrollTop + document.documentElement.scrollTop
+            }
+        }
+    }
+
+    function getViewPortOffset() { //求可视区尺寸的兼容性方法
+        if (0 && window.innerHeight) {
+            return {
+                x: window.innerWidth,
+                y: window.innerHeight,
+            }
+        } else {
+            if (document.compatMode == 'CSS1Compat') {
+                return {
+                    model: '正常',
+                    x: document.documentElement.clientWidth,
+                    y: document.documentElement.clientHeight,
+                }
+
+            } else {
+                return {
+                    model: '怪异(向后兼容模式)',
+                    x: document.body.clientWidth,
+                    y: document.body.clientHeight,
+                }
+            }
+        }
+    }
+
+    let div = document.getElementsByTagName('div')[0]
+
+    let but = document.getElementsByTagName('button')[0]
+
+
+
+    // count = 0;
+    // but.onclick = function () {
+    //     count++;
+    //     if (count % 2) {
+    //         x = window.pageXOffset || document.body.scrollLeft + document.documentElement.scrollLeft
+    //         y = window.pageYOffset || document.body.scrollTop + document.documentElement.scrollTop
+    //     } else {
+    //         window.scrollTo(x, y)
+    //     }
+    // }
+
+    // class Person{
+    //     constructor(name,skill){
+    //         this.name=name,
+    //         this.skill=skill
+    //     }
+    //     showname(){
+    //         return this.name
+    //     }
+    //     showskill(){
+    //         console.log(this.skill)
+    //     }
+    // }
+
+    //  class Student extends Person{
+    //      constructor(name,skill,age){
+    //          super(name,skill)
+    //          this.age=age
+    //      }
+    //      showname(){
+    //          super.showname()
+    //          console.log('这是自己的技能')
+    //      }
+    //      showskill(){
+    //          super.showskill()
+    //          console.log(`自己的技能是${this.skill}`)
+    //      }
+    //  }
+    // let student=new Student('zhang','taoxue',18)
+    // student.showname()
+    // student.showskill()
+</script>
+<script>
+    // class Student {
+    //     constructor(id) {
+    //         this.oDiv = document.querySelector(id)
+    //         this.disX = 0
+    //         this.dixY = 0
+    //         this.init()
+    //     }
+    //     init() {
+    //         this.oDiv.onmousedown = function (ev) {
+    //             this.disX = ev.clientX - this.oDiv.offsetLeft;
+    //             this.disY = ev.clientY - this.oDiv.offsetTop;
+
+
+    //             document.onmousemove = this.fnmove.bind(this)
+    //             document.onmouseup = this.fnup.bind(this)
+    //             return false
+
+    //         }.bind(this)
+
+    //     }
+    //     fnmove(ev) {
+    //         this.oDiv.style.left = ev.clientX - this.disX + 'px'
+    //         this.oDiv.style.top = ev.clientY - this.disY + 'px'
+    //     }
+    //     fnup(ev) {
+    //         document.onmousemove = null
+    //         document.onmouseup = null
+    //     }
+    // }
+
+    // class Person extends Student {
+    //     fnmove(ev) {
+    //         super.fnmove(ev)
+    //         if (this.oDiv.offsetLeft <= 0) {
+    //             this.oDiv.style.left = 0
+    //         }
+    //     }
+    // }
+
+
+
+
+    // new Person('#box2')
+    // new Student('#box1')
+
+
+
+    //  function * gen(){
+    //      yield 'zhang'
+    //      yield 18
+    //      return '信息'
+    //  }
+
+
+    //  let g1=gen()
+    // //  for( let val of g1){
+    // //      console.log(val)
+    // //  }
+    // //  console.log(g1)
+    // // console.log(g1.next())  
+    // // console.log(g1.next())
+    // // console.log(g1.next())
+    // // console.log(g1.next())
+
+    // let [a,b,c]=g1
+    // console.log(a,b,c)
+
+    // function* gen() {
+    //     yield '你好'
+    //     yield '咋啦'
+    //     return '不知道情况'
+    // }
+
+    // let g = gen()
+
+    // console.log(g.next())//{value: '你好', done: false}
+    // console.log(g.next())//{value: '咋啦', done: false}
+    // console.log(g.next())//{value: '不知道情况', done: true}
+    // console.log(g.next())//{value: undefined, done: true}
+    // console.log(g.next())//{value: undefined, done: true}
+
+    // for(let ans of g){//也可以把所有的内容拿出来，但不会有return的值
+    //     console.log(ans)
+    // }
+
+    // let [a,b,c]=g//解构也是没有return值
+    // console.log(a,b,c)
+
+    // console.log(...g)//扩展运算符，也是没有return值
+
+
+    // let arr=Array.from(g)//也是可以配合Array.from(g),生成一个数组，没有return的值
+    // console.log(arr)
+
+    //案例
+    //配合axios使用
+    // function* gen() {
+    //     let data = yield 'zhang'
+    //     yield axios.get(`rul地址adsfas f/asfdasdfjl/adf/${data}`)
+    // }
+
+    // let g = gen()
+    // let username=g.next().value
+    // g.next(username).value.then(res=>{
+    //     console.log(res.data)
+    // })
+    //   let arr=[2,3,4,3,2,3,4,3,4,5,6,4,3,2,2,3,4,6,8,9,7,9,2]
+    // let newarr=[...new Set(arr)]
+    // console.log(newarr)
+    // newarr.add('e')
+    // console.log(newarr)
+    // newarr.delete('a')
+    // console.log('a')
+    // console.log(newarr)
+    // console.log(newarr.size)
+    // newarr.forEach((val,index,arr)=>{
+    //     console.log(val,index,arr)
+    // })
+    // let brr=Array.from(newarr)
+    // brr.splice(0,1)
+    // console.log(brr)
+
+    // newarr.clear()
+    // let brr=Array.from(newarr)
+    // console.log(brr)//清除所有
+
+    // let brr=newarr.add('g')
+    // brr.add('f').add('e')//因为返回也是一个set，所以可以连续add
+
+    // let brr=newarr.delete(2)
+    // console.log(newarr)
+    let set=new Set()
+    let json={
+        a:1,
+        b:2
+    }
+    let json1={
+        a:1,
+        b:2
+    }
+    set.add(json).add(json1)
+    console.log(set)
+    // set.forEach(item=>{
+    //     console.log(item)
+    // })
+
+    // let obj={
+    //     a:'name',
+    //     b:'age',
+    //     c:'love'
+    // }
+    // for( (val) in Object.){
+    //     console.log(val)
+    // }
+
+
+    // let p1=Promise.resolve('aaa')
+    // let p2=Promise.reject('bbb')
+    // let p3=Promise.resolve('ccc')
+    // let a= Promise.all([p1,p2,p3])
+    // a.then(res=>{
+    //     console.log(res)
+    // }).catch((err)=>{
+    //  console.log(err)
+    // })
+
+//     function demo1(){
+//         setTimeout(()=>{
+//             Promise.resolve('aaa')
+//         },1000)
+//     }
+
+//     function demo2(){
+//         setTimeout(()=>{
+//             Promise.resolve('aaa')
+//         },2000)
+//     }
+//     function demo3(){
+//         setTimeout(()=>{
+//             Promise.resolve('aaa')
+//         },3000)
+//     }
+
+
+
+
+// let p=Promise.all([demo1(),demo2(),demo3()])
+// p.then(res=>{
+//     console.log(res)
+// })
+
+// let ooj={
+//     1:'b',
+//     2:'c',
+//     3:'d'
+// }
+// for(let [key,val] of Object.entries(ooj)){
+//     console.log(key)
+// }
+// let a=0b1111
+// let b=12.5
+// Number.isFinite(a)//判断是不是数字
+// console.log(isFinite(a))//判断是不是数字
+// Number.isInteger(b)//判断数字是不是整数
+// console.log(Number.isInteger(b))
+// let d=-(2**53-1)//安全整数(最小)
+// let c=2**53-1//安全整数(最大)
+// console.log(Number.isSafeInteger(c))//判断是不是安全整数
+// console.log(-(2**53-1))
+// console.log(Number.MIN_SAFE_INTEGER)//最小安全整数
+// console.log(2**53-1)
+// console.log(Number.MAX_SAFE_INTEGER)//最大安全整数
+// let e=3.9
+// console.log(Math.trunc(e))//截掉小数点后面的，不会四舍五入
+// Math.sign(-5)//-1
+// Math.sign(5)//1
+// Math.sign(0)//0
+// Math.sign(-0)//-0
+// Math.sign('afa')//NaN
+// console.log(Math.cbrt(27))//开立方
+// console.log(Math.abs(-5))
+
+
+
+// let reg=new RegExp()
+// console.log(st)
+
+
+// let xHttp=new XMLHttpRequest()
+
+
+
+// let obj={
+//     name:'zhang',
+//     age:18,
+//     lover:'chifan'
+// }
+// let newObj=new Proxy(obj,{
+//     get(target,proporty){
+//         if(proporty in target){
+//             console.log(`您访问了${proporty}属性`)
+//             return target[proporty]
+//         }else{
+//             console.warn(`您访问的${proporty}属性不在这个对象上面`)
+//             return `^_^`
+//         }
+//     }
+// })
+// console.log(newObj.fix)
+
+// function sum(a,b){
+//     return a+b 
+// }
+// let newFn=new Proxy(sum,{
+//     apply(target,context,args){
+//         return Reflect.apply(...arguments)
+//     }
+// })
+
+
+// console.log(newFn(2,3))
+
+// let obj={
+//     name:'zhang',
+//     age:18,
+// }
+
+// let newobj=new Proxy(obj,{
+//     set(target,propprty,value){
+//         if(propprty=='age'){
+//             if( !Number.isInteger(value)){
+//                 throw new RangeError('年龄必须是整数')
+//             }
+//             if(value>200){
+//                 throw new RangeError('年龄超标,必须小于200岁')
+//             }
+//         }
+//         target[propprty]=value
+//     },
+//     deleteProperty(target,proporty){
+//         console.log(`要删除${proporty}这个属性`)
+//         delete target[proporty]
+//     },
+//     has(target,proporty){
+//         console.log(`判断是否存在has方法`)
+//         return proporty in target
+//     }
+    
+// })
+// console.log('name' in newobj)
+// // delete newobj.age
+// // newobj.age=190
+// // console.log(newobj.age=191)
+// console.log(newobj)
+// console.log(obj)
+
+
+// function fn(a,b ){
+//     return a+b
+// }
+
+// let newFn=new Proxy(fn,{
+//     apply(target,contentext,arg){
+//        console.log(target,contentext,arg)
+//        console.log(...arguments)
+//        return Reflect.apply(...arguments)**2
+//     }
+// })
+// //Reflect.apply('调用的函数','this指向谁','参数数组')
+// console.log(newFn(2,3))
+
+// let res=Reflect.apply(Math.ceil,null,[9.8])
+// console.log(res)
+
+
+
+// function show(...args){
+//     console.log(this)
+//     console.log(args)
+// }
+// console.log(show.call('abc',1,2,3,4))
+// show.apply('abc',[1,2,3,4])
+// Reflect.apply(show,'abc',[1,2,3,4])
+
+
+
+// // Reflect.apply(,)
+
+// // console.log('toString' in Object)
+
+
+// console.log(Reflect.has(Object,'assign'))
+// let json={a:1,b:2}
+// Reflect.deleteProperty(json,'a')
+// console.log(json)
+
+
+// let set=new Set()
+// console.log(set)
+</script>
+
+</html>
