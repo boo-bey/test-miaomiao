@@ -1,0 +1,183 @@
+{
+    "msg":"ok",
+    "status":0,
+    "data":{
+        "cities":[
+            {
+                "id":1,
+                "nm":"北京",
+                "isHot":1,
+                "py":"beijing"
+            },
+            {
+                "id":10,
+                "nm":"上海",
+                "isHot":1,
+                "py":"shanghai"
+            },
+            {
+                "id":20,
+                "nm":"广州",
+                "isHot":1,
+                "py":"guangzhou"
+            },
+            {
+                "id":30,
+                "nm":"深圳",
+                "isHot":0,
+                "py":"shenzhen"
+            },
+            {
+                "id":42,
+                "nm":"西安",
+                "isHot":0,
+                "py":"xian"
+            },
+            {
+                "id":40,
+                "nm":"天津",
+                "isHot":0,
+                "py":"tianjin"
+            },
+            {
+                "id":40,
+                "nm": "张掖市",
+                "isHot":1,
+                "py":"zhangye"
+            },
+            {
+                "id":54,
+                "nm": "武威市",
+                "isHot":0,
+                "py":"wuwei"
+            },
+            {
+                "id":32,
+                "nm": "庆阳市",
+                "isHot":0,
+                "py":"qingyang"
+            },
+            {
+                "id":68,
+                "nm": "平凉市",
+                "isHot":0,
+                "py":"pingliang"
+            },
+            {
+                "id":74,
+                "nm": "定西市",
+                "isHot":0,
+                "py":"dingxi"
+            },
+            {
+                "id":70,
+                "nm": "陇南市",
+                "isHot":0,
+                "py":"longnan"
+            },
+            {
+                "id":71,
+                "nm": "玉门市",
+                "isHot":0,
+                "py":"yumen"
+            },
+            {
+                "id":76,
+                "nm": "敦煌市",
+                "isHot":1,
+                "py":"dunhuang"
+            },
+            {
+                "id":63,
+                "nm": "临夏市",
+                "isHot":0,
+                "py":"linxia"
+            },
+            {
+                "id":64,
+                "nm": "合作市",
+                "isHot":1,
+                "py":"hezuo"
+            },
+            {
+                "id":90,
+                "nm": "合肥市",
+                "isHot":0,
+                "py":"hefei"
+            },
+            {
+                "id":91,
+                "nm": "芜湖市",
+                "isHot":0,
+                "py":"wuhu"
+            },
+            {
+                "id":92,
+                "nm": "蚌埠市",
+                "isHot":1,
+                "py":"bengbu"
+            },
+            {
+                "id":93,
+                "nm": "淮南市",
+                "isHot":0,
+                "py":"huainan"
+            },
+            {
+                "id":94,
+                "nm": "马鞍山市",
+                "isHot":1,
+                "py":"nanashan"
+            },
+            {
+                "id":101,
+                "nm": "淮北市",
+                "isHot":0,
+                "py":"huaibei"
+            },
+            {
+                "id":102,
+                "nm": "铜陵市",
+                "isHot":0,
+                "py":"tongling"
+            },
+            {
+                "id":103,
+                "nm": "安庆市",
+                "isHot":0,
+                "py":"anqing"
+            },
+            {
+                "id":104,
+                "nm": "黄山市",
+                "isHot":0,
+                "py":"huangshan"
+            },
+            {
+                "id":105,
+                "nm": "滁州市",
+                "isHot":0,
+                "py":"chuzhou"
+            },
+            {
+                "id":106,
+                "nm": "阜阳市",
+                "isHot":0,
+                "py":"fuyang"
+            },
+            {
+                "id":107,
+                "nm": "宿州市",
+                "isHot":0,
+                "py":"suzhou"
+            },
+            {
+                "id":108,
+                "nm": "六安市",
+                "isHot":0,
+                "py":"luan"
+            }
+            
+        ]
+    }
+}

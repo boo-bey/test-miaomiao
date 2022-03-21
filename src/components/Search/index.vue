@@ -1,96 +1,12 @@
 <template>
   <div class="content">
     <div class="search">
-      <input type="text" />
+      <input type="text" v-model="val" />
       <span class="iconfont">&#xe650;</span>
     </div>
     <div class="searchlist">
       <ul>
         <li>电影/电视/综艺</li>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
-        <div class="mou">
-          <img src="/imgs/imgs1.jpeg" alt="" />
-          <div class="movielist">
-            <h3>无名之辈</h3>
-            <p>A Cool Fish</p>
-            <p><span>剧情</span><span>喜剧</span><span>犯罪</span></p>
-            <p>2018-11-16</p>
-          </div>
-          <div>
-            <span>8.5</span>
-          </div>
-        </div>
         <div class="mou">
           <img src="/imgs/imgs1.jpeg" alt="" />
           <div class="movielist">
@@ -110,7 +26,30 @@
 
 <script>
 export default {
-  name:'Search',
+  name: "Search",
+  data() {
+    return {
+      val: "",
+    };
+  },
+watch:{
+  val(){
+    this.axios({
+      method:'get',
+      url:'/data.json',
+      params:{
+      }
+    }).then(res=>{
+      console.log(res)
+    })
+  }
+}
+
+};
+</script>
+
+
+
 };
 </script>
 
